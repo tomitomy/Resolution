@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 370
+  Height = 240
+  Top = 162
+  Width = 280
+  Caption = '分辨率'
+  ClientHeight = 240
+  ClientWidth = 280
+  Constraints.MinHeight = 240
+  Constraints.MinWidth = 280
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '1.8.2.0'
+  object trcbLight: TTrackBar
+    Left = 8
+    Height = 47
+    Top = 184
+    Width = 264
+    Min = 1
+    OnChange = trcbLightChange
+    PageSize = 1
+    Position = 2
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 0
+  end
+  object lstbResolutions: TListBox
+    Left = 8
+    Height = 112
+    Top = 56
+    Width = 264
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 0
+    OnDblClick = lstbResolutionsDblClick
+    ScrollWidth = 262
+    TabOrder = 1
+    TopIndex = -1
+  end
+  object combOutputs: TComboBox
+    AnchorSideRight.Control = chkbPrimary
+    Left = 8
+    Height = 33
+    Top = 12
+    Width = 155
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 6
+    ItemHeight = 0
+    OnSelect = combOutputsSelect
+    Style = csDropDownList
+    TabOrder = 2
+  end
+  object chkbDisabled: TCheckBox
+    Left = 216
+    Height = 27
+    Top = 15
+    Width = 56
+    Anchors = [akTop, akRight]
+    Caption = '禁用'
+    OnChange = chkbDisabledChange
+    TabOrder = 3
+  end
+  object chkbPrimary: TCheckBox
+    AnchorSideRight.Control = chkbDisabled
+    Left = 169
+    Height = 27
+    Top = 15
+    Width = 41
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 6
+    Caption = '主'
+    OnChange = chkbPrimaryChange
+    TabOrder = 4
+  end
+end
